@@ -8,16 +8,23 @@
 </head>
 <body>
 
+    <select name="Opciones" id="Opciones">
+        <option value="" selected>Select an option..</option>
+        <option value="Alive" id="Options">Alive</option>
+        <option value="Dead" id="Options">Dead</option>
+        <option value="all" id="all">All</option>
+    </select>
+
     <div id="container">
         <ul id="pictures">
 
         </ul>
 
+        <div id="load-more">
+            <button id="to-load" alt="Load more">Load More Images</button>
+        </div>
     </div>
 
-    <div id="load-more">
-        <button id="to-load" alt="Load more">Load More Images</button>
-    </div>
 
 
     <script src="javascript.js"></script>
