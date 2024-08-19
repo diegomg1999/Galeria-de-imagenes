@@ -92,10 +92,14 @@ function filterCharactersByStatus(selectedStatus) {
     .then(data => {
 
       let filteredData = selectedStatus === 'all' 
-        ? data 
+        ? data.splice(0,5)
         : data.filter(character => character.status === selectedStatus);
-        
+
+
       filteredData.forEach(element => {
+        if(selectedStatus === "all"){
+            loadButtonContainer.appendChild(buttonToLoad);
+        }
         let li = document.createElement('li');
         let img = document.createElement('img');
         const name = document.createElement('p');
